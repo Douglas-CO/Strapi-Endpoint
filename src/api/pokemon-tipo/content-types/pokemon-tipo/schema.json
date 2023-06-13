@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pokemon_tipos",
+  "info": {
+    "singularName": "pokemon-tipo",
+    "pluralName": "pokemon-tipos",
+    "displayName": "pokemonTipo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "string"
+    },
+    "pokemon_primera_generacions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pokemon-primera-generacion.pokemon-primera-generacion",
+      "inversedBy": "pokemon_tipos"
+    }
+  }
+}

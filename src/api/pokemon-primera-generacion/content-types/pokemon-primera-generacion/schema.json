@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pokemon_primera_generacions",
+  "info": {
+    "singularName": "pokemon-primera-generacion",
+    "pluralName": "pokemon-primera-generacions",
+    "displayName": "pokemonPrimeraGeneracion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "ID_Pokemon": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "richtext"
+    },
+    "altura": {
+      "type": "string"
+    },
+    "peso": {
+      "type": "string"
+    },
+    "ps": {
+      "type": "integer",
+      "default": 1,
+      "max": 15,
+      "min": 1
+    },
+    "ataque": {
+      "type": "integer",
+      "default": 1,
+      "max": 15,
+      "min": 1
+    },
+    "defensa": {
+      "type": "integer",
+      "default": 1,
+      "max": 15,
+      "min": 1
+    },
+    "ataque_especial": {
+      "type": "integer",
+      "default": 1,
+      "max": 15,
+      "min": 1
+    },
+    "defensa_especial": {
+      "type": "integer",
+      "default": 1,
+      "max": 15,
+      "min": 1
+    },
+    "velocidad": {
+      "type": "integer",
+      "default": 1,
+      "max": 15,
+      "min": 1
+    },
+    "pokemon_categorias": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pokemon-categoria.pokemon-categoria",
+      "mappedBy": "pokemon_primera_generacions"
+    },
+    "pokemon_habilidads": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pokemon-habilidad.pokemon-habilidad",
+      "mappedBy": "pokemon_primera_generacions"
+    },
+    "pokemon_tipos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pokemon-tipo.pokemon-tipo",
+      "mappedBy": "pokemon_primera_generacions"
+    },
+    "pokemon_debilidads": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pokemon-debilidad.pokemon-debilidad",
+      "mappedBy": "pokemon_primera_generacions"
+    },
+    "imagen": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
