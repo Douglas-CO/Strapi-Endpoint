@@ -1,9 +1,5 @@
 "use strict";
 
-/**
- * posts-report service.
- */
-
 module.exports = {
   postsPokedex: async () => {
     try {
@@ -34,7 +30,7 @@ module.exports = {
         }
       );
       let entriesReduced;
-      console.log(entries.reduce(i => i.id))
+      // console.log(entries)
       if (entries && Array.isArray(entries)) {
         entriesReduced = entries.reduce((acc, item) => {
           acc = acc || [];
@@ -57,7 +53,6 @@ module.exports = {
             Debilidades: item.pokemon_debilidads.map(e => e.debilidad) || "",
             foto: item.imagen.map(e => e.url) || "",
           });
-
           return acc;
         }, []);
       }
